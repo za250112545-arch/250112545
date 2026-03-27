@@ -3,6 +3,7 @@
 
 #include <vector>
 
+
 class DataSet {
 private:
     std::vector<int> data;
