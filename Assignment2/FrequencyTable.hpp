@@ -11,8 +11,15 @@ private:
     std::vector<int> absoluteFrequency;   // frecuencia absoluta
     std::vector<double> relativeFrequency; // frecuencia relativa
     std::vector<double> percentage;       // porcentaje
-
+    std::vector<double> accumulatedAbsoluteFrequency;
+    std::vector<double> accumulatedRelativeFrequency; 
+	int k;
+	int c;
+	int r;
+	std::vector<std::vector <int>> dataClass;
+	
 public:
+	void sortClass();
     FrequencyTable();
     FrequencyTable(const DataSet& ds);
 
@@ -24,8 +31,10 @@ public:
     void calculateAbsoluteFrequencies();
     void calculateRelativeFrequencies();
     void calculatePercentages();
+    void calculateAccumulatedAF();
+    void calculateAccumulatedRF();
     void buildTable();
 
     void printTable() const;
 };
-
+#endif
